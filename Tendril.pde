@@ -28,7 +28,7 @@ class Tendril
     int startX = myX;
     int startY = myY;
     for(int i = 0; i < myNumSegments; i++){
-      myAngle += Math.random()*0.8-0.4;
+      myAngle += Math.random()*20-10;
       int endX = (int)(startX + Math.cos(myAngle) * SEG_LENGTH);
       int endY = (int)(startY + Math.sin(myAngle) * SEG_LENGTH);
       line(startX, startY, endX, endY);
@@ -36,7 +36,7 @@ class Tendril
       startY = endY;
     }
     if(myNumSegments >= 3){
-      Cluster c = new Cluster(myNumSegments/4, startX, startY, 0);
+      Cluster c = new Cluster(myNumSegments/4, startX, startY);
     }
   }
 }
