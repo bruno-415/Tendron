@@ -1,5 +1,4 @@
-int initialNumOfSegments = 50;
-double angleAdjustment = 0;
+int initialNumOfSegments = 250;
 public void setup()
 {
   size(500, 500);  
@@ -10,8 +9,7 @@ public void setup()
 public void draw()
 {
   background(255);
-  Cluster c = new Cluster(initialNumOfSegments, 250, 250, angleAdjustment);
-  angleAdjustment += Math.PI/32;
+  Cluster c = new Cluster(initialNumOfSegments, 400, 400);
 }
 public void mousePressed()
 {
